@@ -16,3 +16,10 @@ synaptic_weights = 2 * np.random.random((3, 1)) - 1
 
 print('Random starting synaptic weights: ')
 print(synaptic_weights)
+
+for iteration in range(1):
+    input_layer = training_inputs
+    output = sigmoid(np.dot(input_layer, synaptic_weights))
+
+print('Output after training: ')
+print(output)
