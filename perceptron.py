@@ -20,13 +20,18 @@ synaptic_weights = 2 * np.random.random((3, 1)) - 1
 print('Random starting synaptic weights: ')
 print(synaptic_weights)
 
-for iteration in range(1):
+for iteration in range(100000):
     input_layer = training_inputs
     outputs = sigmoid(np.dot(input_layer, synaptic_weights))
 
     error = training_outputs - outputs
 
     adjustments = error * sigmoid_derivative(outputs)
+
+    synaptic_weights += np.dot(input_layer.T, adjustments)
+
+print('Synaptic weights after training: ')
+print(synaptic_weights)
 
 print('Output after training: ')
 print(outputs)
