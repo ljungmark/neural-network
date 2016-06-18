@@ -115,9 +115,9 @@ Below you can see four sets of inputs where we feed a training model three digit
 
 <h1>Perceptron neural network</h1>
 <p>This network won't have any hidden layers and will look like this:</p>
-<img src="docs/perceptron.png">
+<img src="perceptron.png">
 <p>The input values will in our case be either 0 or 1. Each synapse will be given a random weight. After passing through the neuron which will do a weighted sum of the inputs we'll put it through a normalizing function to get the output to either a 0 or a 1. For this, we'll use the Sigmoid normalizing function.</p>
-<img src="docs/sigmoid-normalizing-function.png">
+<img src="sigmoid-normalizing-function.png">
 
 <h1>Training process</h1>
 <ol>
