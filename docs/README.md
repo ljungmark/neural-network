@@ -116,7 +116,7 @@ Below you can see four sets of inputs where we feed a training model three digit
 <h1>Perceptron neural network</h1>
 <p>This network won't have any hidden layers and will look like this:</p>
 <img src="docs/perceptron.png">
-<p>The input values will in our case be either 0 or 1. Each synapse will be given a random weight. After passing through the neuron which will do a weighted sum of the inputs. We will then put it through a normalizing function to get the output to either a 0 or a 1. For this, we'll use the Sigmoid Normalizing Function.</p>
+<p>The input values will in our case be either 0 or 1. Each synapse will be given a random weight. After passing through the neuron which will do a weighted sum of the inputs we'll put it through a normalizing function to get the output to either a 0 or a 1. For this, we'll use the Sigmoid normalizing function.</p>
 <img src="docs/sigmoid-normalizing-function.png">
 
 <h1>Training process</h1>
@@ -127,4 +127,5 @@ Below you can see four sets of inputs where we feed a training model three digit
     <li>Repeat the process 100000 times</li>
 </ol>
 <h2>Error Weighted Derivative</h2>
-<p>Adjust weights by = error .input.phi'(output)</p>
+<p>Adjust weights by = error * input * phi'(output)</p>
+<p>We'll multiple the error, which is the difference between the expected output and the actual output, with the input - which is either a 0 or a 1. Then we take the gradient of the Sigmoid function at our output.</p>
