@@ -1,5 +1,6 @@
 <h1>Problem set</h1>
 Below you can see four sets of inputs where we feed a training model three digits and declare the expected output. Based on this, we want to write a neural network that can predict the output of the 'New situation' input.
+
 <h2>Previously known inputs and outputs</h2>
 <table>
 <tr>
@@ -115,5 +116,15 @@ Below you can see four sets of inputs where we feed a training model three digit
 <h1>Perceptron neural network</h1>
 <p>This network won't have any hidden layers and will look like this:</p>
 <img src="docs/perceptron.png">
-<p>The input values will in our case be either 0 or 1. Each synapse will be given a random weight. After passing through the neuron which will do a weighted sum of the inputs. We will then put it through a normalizing function to get the output to either a 0 or a 1.</p>
+<p>The input values will in our case be either 0 or 1. Each synapse will be given a random weight. After passing through the neuron which will do a weighted sum of the inputs. We will then put it through a normalizing function to get the output to either a 0 or a 1. For this, we'll use the Sigmoid Normalizing Function.</p>
 <img src="docs/sigmoid-normalizing-function.png">
+
+<h1>Training process</h1>
+<ol>
+    <li>Take the input from the training example and put them through the formula to get the neurons output</li>
+    <li>Calculate the error, which is the difference between the output we got and the actual output</li>
+    <li>Depending on the severity of the error, adjust the weights accordingly</li>
+    <li>Repeat the process 100000 times</li>
+</ol>
+<h2>Error Weighted Derivative</h2>
+<p>Adjust weights by = error .input.phi'(output)</p>
