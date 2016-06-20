@@ -10,3 +10,16 @@ class NeuralNetwork():
 
     def sigmoid_derivative(x):
         return x * (1 - x)
+
+    def train(self, training_inputs, training_outputs, training_iterations):
+        for iteration in range(training_iterations):
+            output = self.think(training_inputs)
+            error = training_outputs - output
+            adjustments = np.dot(training_inputs.T, error * self.sigmoid_derivative(output))
+            self.synaptic_weights += adjustments
+
+    def think(self, inputs):
+        inputs = input.setType(float)
+        output = sigmoid(np.dot(inputs, self.synaptic_weights))
+
+        return output
