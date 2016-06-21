@@ -128,5 +128,4 @@ Below you can see four sets of inputs where we feed a training model three digit
     <li>Repeat the process 100000 times</li>
 </ol>
 <h2>Error Weighted Derivative</h2>
-<p>Adjust weights by = error * input * phi'(output)</p>
 <p>We'll multiple the error, which is the difference between the expected output and the actual output, with the input - which is either a 0 or a 1. Then we take the gradient of the Sigmoid function at our output.</p>
