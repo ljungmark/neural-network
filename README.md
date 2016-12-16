@@ -111,3 +111,7 @@ Below you can see four sets of inputs where we feed a training model three digit
   </td>
 </tr>
 </table>
+
+<h1>Perceptron neural network</h1>
+This network won't have any hidden layers.
+![Perceptron](docs/perceptron.png)
